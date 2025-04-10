@@ -1,0 +1,250 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* 헤더 */
+header {
+    background-color: #ff9f00;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 네비게이션 바 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff9f00;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+    color: white;
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+    color: #ffdf00;
+}
+
+/* 로그인 버튼 스타일 */
+.login-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #f5c518, #e69e00);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 우선순위를 높이기 위해 !important 추가 */
+.nav-item.login-btn .login-button {
+    display: inline-block !important;
+    background: linear-gradient(45deg, #f5c518, #e69e00) !important;
+}
+
+.login-button:hover {
+    background: linear-gradient(45deg, #e69e00, #d48a00);
+    transform: scale(1.08);
+}
+
+.login-button:active {
+    background: #b37000;
+}
+
+
+/* 모달 창 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ff9f00;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.modal-content input:focus {
+    border-color: #ff6f00;
+    box-shadow: 0 0 8px rgba(255, 111, 0, 0.5);
+}
+
+.modal-content button {
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #ff9f00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.modal-content button:hover {
+    background-color: #ff6f00;
+    transform: scale(1.05);
+}
+
+.modal-content p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.modal-content a {
+    color: #ff6f00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal-content a:hover {
+    text-decoration: underline;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ff6f00;
+}
+
+/* 페이드인 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+/* 회원가입 페이지 스타일 */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5c518, #e69e00);
+}
+
+.signup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.signup-box h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.signup-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signup-box input {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #e69e00;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.signup-box input:focus {
+    border-color: #ff6f00;
+    box-shadow: 0 0 8px rgba(255, 111, 0, 0.5);
+}
+
+.signup-box button {
+    padding: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #ff9f00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.signup-box button:hover {
+    background-color: #ff6f00;
+    transform: scale(1.05);
+}
+
